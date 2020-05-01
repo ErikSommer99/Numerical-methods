@@ -16,11 +16,6 @@ public class Halveringsmetoden {
         return cos(a) - a;
     }
 
-    //Funksjonen f(b)
-    public static double fb(double b){
-        return cos(b) - b;
-    }
-
     //Funksjonen f(c)
     public static double fc(double c){
         return cos(c) - c;
