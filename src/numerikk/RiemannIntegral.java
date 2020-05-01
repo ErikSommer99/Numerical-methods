@@ -11,12 +11,16 @@ import static java.lang.Math.*;
 
 public class RiemannIntegral {
 
+    public static double funksjon(double x){
+        return sin(sqrt(x));
+    }
+
     public static void main(String[] args) {
-        //Funksjon: sin(sqrt(x))
 
         //Grense
         double a = 1;
         double b = 3;
+
         double x;
 
         //Oppdeling
@@ -33,7 +37,7 @@ public class RiemannIntegral {
 
         //Summerer
         for (int i = 0; i < n; i++){
-            R = R + sin(sqrt(x)) * dx;
+            R = R + funksjon(x) * dx;
             x = x + dx;
         }
 
