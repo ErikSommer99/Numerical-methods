@@ -13,7 +13,7 @@ import static java.lang.Math.sqrt;
 public class SimpsonIntegral {
 
     //Funksjonen f(x)
-    public static double funksjon(double x){
+    public static double f(double x){
         return sin(sqrt(x));
     }
 
@@ -33,18 +33,18 @@ public class SimpsonIntegral {
         double dx = (b-a)/n;
 
         //Deklarerer x og summen S
-        double S = dx/3*(funksjon(a)+funksjon(b));
+        double S = dx/3*(f(a)+ f(b));
 
         //Summerer oddetallsbidrag
         for (int i = 1; i <= (n-1); i+=2){
             x = a + i*dx;
-            S = S + 4*funksjon(x)*dx/3;
+            S = S + 4* f(x)*dx/3;
         }
 
         //Summerer partallsbidrag
         for (int i = 2; i <= (n-2); i+=2){
             x = a + i*dx;
-            S = S + 2*funksjon(x)*dx/3;
+            S = S + 2* f(x)*dx/3;
         }
 
         //skriver svaret ut

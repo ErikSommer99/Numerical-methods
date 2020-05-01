@@ -8,7 +8,7 @@ import static java.lang.Math.sqrt;
 public class TrapesIntegral {
 
     //Funksjonen f(x)
-    public static double funksjon(double x){
+    public static double f(double x){
         return sin(sqrt(x));
     }
 
@@ -28,12 +28,12 @@ public class TrapesIntegral {
         double dx = (b-a)/n;
 
         //Deklarerer x og summen T
-        double T = dx*(funksjon(a) + funksjon(b))/2;
+        double T = dx*(f(a) + f(b))/2;
         x = a + dx;
 
         //Summerer
         for (int i = 0; i < (n-a); i++){
-            T = T + funksjon(x)*dx;
+            T = T + f(x)*dx;
             x = x + dx;
         }
 

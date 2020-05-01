@@ -12,7 +12,7 @@ import static java.lang.Math.*;
 public class RiemannIntegral {
 
     //Funksjonen f(x)
-    public static double funksjon(double x){
+    public static double f(double x){
         return sin(sqrt(x));
     }
 
@@ -38,7 +38,7 @@ public class RiemannIntegral {
 
         //Summerer
         for (int i = 0; i < n; i++){
-            R = R + funksjon(x) * dx;
+            R = R + f(x) * dx;
             x = x + dx;
         }
 
