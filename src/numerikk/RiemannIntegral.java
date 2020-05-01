@@ -11,6 +11,7 @@ import static java.lang.Math.*;
 
 public class RiemannIntegral {
 
+    //Funksjonen f(x)
     public static double funksjon(double x){
         return sin(sqrt(x));
     }

@@ -1,6 +1,6 @@
 package numerikk;
 
-import static java.lang.Math.cos;
+import static java.lang.Math.*;
 
 /**
  * Skript som løser likningen cos(x) - x = 0
@@ -11,17 +11,28 @@ import static java.lang.Math.cos;
 
 public class Halveringsmetoden {
 
+    //Funksjonen f(a)
+    public static double fa(double a, double b){
+        return cos(a) - a;
+    }
+
+    //Funksjonen f(b)
+    public static double fb(double a, double b){
+        return cos(b) - b;
+    }
+
+    //Funksjonen f(c)
+    public static double fc(double c){
+        return cos(c) - c;
+    }
+
     public static void main(String[] args) {
 	    double a = 0;
 	    double b = 1;
 
-	    double fa = cos(a) - a;
-	    double fb = cos(b) - b;
-
 	    for (int i = 0; i < 16; i++){
 	        double c = (b+a)/2;
-	        double fc = cos(c) - c;
-	        if (fa * fc < 0){
+	        if (fa(a, b) * fc(c) < 0){
 	            b = c;
             }else {
 	            a = c;

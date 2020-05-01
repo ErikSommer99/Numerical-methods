@@ -2,8 +2,7 @@ package numerikk;
 
 import java.util.Scanner;
 
-import static java.lang.Math.pow;
-import static java.lang.Math.sqrt;
+import static java.lang.Math.*;
 
 /**
  * Skript som løser andregradslikninger.
@@ -15,6 +14,11 @@ import static java.lang.Math.sqrt;
  */
 
 public class Andregradslikning {
+
+    //Likning
+    public static double likning(double a, double b, double c){
+        return pow(b, 2) - 4 * a * c;
+    }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -30,16 +34,14 @@ public class Andregradslikning {
         double x1;
         double x2;
 
-        double a1 = pow(b, 2) - 4 * a * c;
-
-        if (a1 < 0){
+        if (likning(a,b,c) < 0){
             System.out.println("Ingen reelle løsninger");
-        }else if (a1 == 0){
+        }else if (likning(a,b,c) == 0){
             x = -b/(2*a);
             System.out.println("x = " + x);
         } else {
-            x1 = (-b-sqrt(a1))/(2*a);
-            x2 = (-b+sqrt(a1))/(2*a);
+            x1 = (-b-sqrt(likning(a,b,c)))/(2*a);
+            x2 = (-b+sqrt(likning(a,b,c)))/(2*a);
             System.out.println("x1 = " + x1 + ", x2 = " + x2);
         }
     }
