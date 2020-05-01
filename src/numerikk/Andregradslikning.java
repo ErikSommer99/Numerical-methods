@@ -26,9 +26,9 @@ public class Andregradslikning {
         System.out.print("c: ");
         double c = in.nextDouble();
 
-        double x = 0;
-        double x1 = 0;
-        double x2 = 0;
+        double x;
+        double x1;
+        double x2;
 
         double a1 = pow(b, 2) - 4 * a * c;
 
