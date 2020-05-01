@@ -12,12 +12,12 @@ import static java.lang.Math.*;
 public class Halveringsmetoden {
 
     //Funksjonen f(a)
-    public static double fa(double a, double b){
+    public static double fa(double a){
         return cos(a) - a;
     }
 
     //Funksjonen f(b)
-    public static double fb(double a, double b){
+    public static double fb(double b){
         return cos(b) - b;
     }
 
@@ -32,7 +32,7 @@ public class Halveringsmetoden {
 
 	    for (int i = 0; i < 16; i++){
 	        double c = (b+a)/2;
-	        if (fa(a, b) * fc(c) < 0){
+	        if (fa(a) * fc(c) < 0){
 	            b = c;
             }else {
 	            a = c;
