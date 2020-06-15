@@ -22,6 +22,7 @@ public class Andregradslikning {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        JF
 
         System.out.print("a: ");
         double a = in.nextDouble();
